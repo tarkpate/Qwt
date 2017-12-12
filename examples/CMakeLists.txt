@@ -1,6 +1,7 @@
 include_directories(../src)
 
 add_subdirectory(bode)
+add_subdirectory(barchart)
 add_subdirectory(cpuplot)
 add_subdirectory(curvdemo1)
 #add_subdirectory(curvdemo2)

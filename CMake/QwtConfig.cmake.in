@@ -1,0 +1,7 @@
+#-----------------------------------------------------------------------------
+#
+# QwtConfig.cmake - Qwt CMake configuration file for external projects.
+
+
+SET(SCI_QWT_INCLUDE "@SCI_QWT_INCLUDE@")
+#SET(SCI_TEEM_LIBRARY "@SCI_TEEM_LIBRARY@")

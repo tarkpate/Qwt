@@ -10,4 +10,8 @@ add_subdirectory(src)
 add_subdirectory(examples)
 add_subdirectory(textengines)
 
+SET(SCI_QWT_INCLUDE "${CMAKE_BINARY_DIR}/src")
+#SET(SCI_QWT_LIBRARY teem CACHE INTERNAL "Teem library" FORCE)
 
+CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/CMake/QwtConfig.cmake.in"
+  "${CMAKE_BINARY_DIR}/QwtConfig.cmake" @ONLY IMMEDIATE)
