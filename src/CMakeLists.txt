@@ -203,5 +203,10 @@ set(qwt_FORMS
 qt4_wrap_cpp(qwt_HDRS_MOC ${qwt_HDRS})
 qt4_wrap_ui(qwt_FORM_HDRS ${qwt_FORMS})
 
+if(BUILD_SHARED_LIBS)
+  MESSAGE("build shared libs is on")
+  add_definitions(-DQWT_DLL -DQWT_MAKEDLL)
+endif()
+
 add_library(qwt SHARED ${qwt_SRCS} ${qwt_HDRS_MOC} ${qwt_FORM_HDRS})
 target_link_libraries(qwt ${QT_LIBRARIES})

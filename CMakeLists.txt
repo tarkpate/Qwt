@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
 project(qwt)
 
-
 find_package(Qt4 REQUIRED QtCore QtGui QtSvg QtXml)
 include(${QT_USE_FILE})
 add_definitions(${QT_DEFINITIONS})
+
+OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON)
+MARK_AS_ADVANCED(BUILD_SHARED_LIBS)
 
 add_subdirectory(src)
 add_subdirectory(examples)
