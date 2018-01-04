@@ -9,8 +9,13 @@ OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON)
 MARK_AS_ADVANCED(BUILD_SHARED_LIBS)
 
 add_subdirectory(src)
-add_subdirectory(examples)
 add_subdirectory(textengines)
+
+OPTION(BUILD_EXAMPLES "Build examples" OFF)
+MARK_AS_ADVANCED(BUILD_EXAMPLES)
+IF (BUILD_EXAMPLES)
+  add_subdirectory(examples)
+ENDIF()
 
 SET(SCI_QWT_INCLUDE "${CMAKE_SOURCE_DIR}/src")
 SET(SCI_QWT_LIBRARY qwt CACHE INTERNAL "Qwt library" FORCE)
