@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(qwt)
 
+MESSAGE("Qt5_PATH:" ${Qt5_PATH})
 LIST(APPEND CMAKE_PREFIX_PATH ${Qt5_PATH})
 
 FIND_PACKAGE(Qt5Core REQUIRED HINTS ${Qt5_PATH})
