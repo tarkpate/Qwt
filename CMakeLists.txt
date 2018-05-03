@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 project(qwt)
 
-find_package(Qt4 REQUIRED QtCore QtGui QtSvg QtXml)
-include(${QT_USE_FILE})
-add_definitions(${QT_DEFINITIONS})
+FIND_PACKAGE(Qt5Core REQUIRED HINTS ${Qt5_PATH})
+FIND_PACKAGE(Qt5Gui REQUIRED HINTS ${Qt5_PATH})
+FIND_PACKAGE(Qt5Widgets REQUIRED HINTS ${Qt5_PATH})
+FIND_PACKAGE(Qt5Svg REQUIRED HINTS ${Qt5_PATH})
 
 OPTION(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 MARK_AS_ADVANCED(BUILD_SHARED_LIBS)

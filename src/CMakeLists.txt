@@ -200,8 +200,8 @@ qwt_widget_overlay.cpp
 set(qwt_FORMS
 )
 
-qt4_wrap_cpp(qwt_HDRS_MOC ${qwt_HDRS})
-qt4_wrap_ui(qwt_FORM_HDRS ${qwt_FORMS})
+qt5_wrap_cpp(qwt_HDRS_MOC ${qwt_HDRS})
+qt5_wrap_ui(qwt_FORM_HDRS ${qwt_FORMS})
 
 if(BUILD_SHARED_LIBS)
   MESSAGE("build shared libs is on")
@@ -211,4 +211,4 @@ else()
   add_library(qwt ${qwt_HDRS} ${qwt_SRCS} ${qwt_HDRS_MOC} ${qwt_FORM_HDRS})
 endif()
 
-target_link_libraries(qwt ${QT_LIBRARIES})
+target_link_libraries(qwt Qt5::Widgets)
