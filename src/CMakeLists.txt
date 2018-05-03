@@ -211,4 +211,4 @@ else()
   add_library(qwt ${qwt_HDRS} ${qwt_SRCS} ${qwt_HDRS_MOC} ${qwt_FORM_HDRS})
 endif()
 
-target_link_libraries(qwt Qt5::Widgets)
+target_link_libraries(qwt Qt5::Widgets Qt5::Svg Qt5::Concurrent Qt5::PrintSupport)

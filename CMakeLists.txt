@@ -1,16 +1,20 @@
 cmake_minimum_required(VERSION 2.8)
 project(qwt)
 
+SET(CMAKE_PREFIX_PATH ${Qt5_PATH})
+
 FIND_PACKAGE(Qt5Core REQUIRED HINTS ${Qt5_PATH})
 FIND_PACKAGE(Qt5Gui REQUIRED HINTS ${Qt5_PATH})
 FIND_PACKAGE(Qt5Widgets REQUIRED HINTS ${Qt5_PATH})
 FIND_PACKAGE(Qt5Svg REQUIRED HINTS ${Qt5_PATH})
+FIND_PACKAGE(Qt5Concurrent REQUIRED HINTS ${Qt5_PATH})
+FIND_PACKAGE(Qt5PrintSupport REQUIRED HINTS ${Qt5_PATH})
 
 OPTION(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 MARK_AS_ADVANCED(BUILD_SHARED_LIBS)
 
 add_subdirectory(src)
-add_subdirectory(textengines)
+#add_subdirectory(textengines)
 
 OPTION(BUILD_EXAMPLES "Build examples" OFF)
 MARK_AS_ADVANCED(BUILD_EXAMPLES)
